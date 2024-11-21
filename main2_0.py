@@ -5,7 +5,7 @@ import time as t
 
 date = t.strftime("%d %b, %Y %H:%M:%S")
 
-print(date)
+print("It is",date)
 while True:
 
     i = input("Add, Edit, Done, Remove, Show, Exit : ").strip()
