@@ -1,4 +1,4 @@
-FILEPATH = "files/list.txt"
+FILEPATH = "../files/list.txt"
 
 def read_todo(filepath = FILEPATH):
     """
