@@ -1,4 +1,6 @@
-def read_todo(filepath = "files/list.txt"):
+FILEPATH = "files/list.txt"
+
+def read_todo(filepath = FILEPATH):
     """
     Function reads the contents of the list.txt
      file and returns a list of todos
@@ -9,7 +11,7 @@ def read_todo(filepath = "files/list.txt"):
         todo = f.readlines()
     return todo
 
-def write_todo(todo, filepath = "files/list.txt"):
+def write_todo(todo, filepath = FILEPATH):
     """
     writes the curent contents of todos
     :param todo: list of items
@@ -18,7 +20,3 @@ def write_todo(todo, filepath = "files/list.txt"):
     """
     with open(filepath, "w") as f:
         f.writelines(todo)
-# using with context manager is recommended over the second below approach
-# file = open("list.txt","r")
-"todo = file.readlines()"
-# file.close()
