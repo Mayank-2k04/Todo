@@ -1,4 +1,4 @@
-FILEPATH = "../files/list.txt"
+FILEPATH = "list.txt"
 
 def read_todo(filepath = FILEPATH):
     """
@@ -11,7 +11,6 @@ def read_todo(filepath = FILEPATH):
         todo = f.readlines()
     return todo
 
-
 def write_todo(todo, filepath = FILEPATH):
     """
     writes the curent contents of todos
@@ -22,7 +21,6 @@ def write_todo(todo, filepath = FILEPATH):
     with open(filepath, "w") as f:
         f.writelines(todo)
 
-
 def print_todo():
     todo = read_todo()
     if len(todo) == 0:
@@ -30,23 +28,6 @@ def print_todo():
         return
     for ii, itm in enumerate(todo):
         print(str(ii+1) + ". " + itm.strip("\n"))
-
-
-# def add(n):
-#     if len(n) == 0 or n.isspace():
-#         print("Enter an item to add.")
-#         return
-#
-#     todo = read_todo()
-#     todo.append(n + "\n")
-#     write_todo(todo)
-
-
-# def modify(index,value):
-#     todo = read_todo()
-#     todo[index] = value + '\n'
-#     write_todo(todo)
-
 
 def done(ii):
     todo = read_todo()
@@ -61,7 +42,6 @@ def done(ii):
     except IndexError:
         print("Enter a valid index")
 
-
 def remove(ii):
     todo = read_todo()
     if len(todo) == 0:
@@ -74,6 +54,3 @@ def remove(ii):
         print("Removed :", x,end="")
     except IndexError:
         print("Enter a valid index")
-
-# if __name__ == "__main__":
-#     print("Hi")
