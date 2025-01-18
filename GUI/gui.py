@@ -1,14 +1,20 @@
 import PySimpleGUI as sg
 import layout as lay
 from modules import guifeat
+import time
+import os
+
+if not os.path.exists("list.txt"):
+    with open('list.txt','w') as f:
+        pass
 
 
-sg.theme('gray gray gray')
+sg.theme('Black')
 window = sg.Window("To-Do App",layout=lay.Layout)
 
 while True:
-    event, values = window.read()
-    print(event,values)
+    event, values = window.read(500)
+    window['clock'].update(time.strftime("%b %d, %Y  %H:%M:%S"))
     try:
         match event:
 
