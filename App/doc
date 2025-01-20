@@ -1,0 +1,3 @@
+The gui implementation has 4 files, namely gui.py, layout.py, guifeat.py and list.txt
+The gui.py file is the main file. The layout.py file defines the layout of the screen. The guifeat.py
+has read write functions to list.
