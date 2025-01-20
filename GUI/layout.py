@@ -1,8 +1,8 @@
 import PySimpleGUI as sg
-from modules import guifeat
+import guifeat
 
 td = guifeat.read_todo()
-
+date_label = sg.Text('',key='clock',background_color='orange')
 title = sg.Text("Enter to do item",background_color="black",border_width=2,justification='center')
 inp = sg.Input(key='INPUT')
 add_button = sg.Button("Add")
@@ -13,11 +13,15 @@ remove_button = sg.Button("Remove")
 completed_button = sg.Button("Completed")
 ex = sg.Exit()
 
+
+
+
 Layout = [
+    [date_label],
     [title],
     [inp, add_button],
     [label],
     [lst, edit_button],
     [completed_button,remove_button],
-    [ex]
+    [ex],
 ]
